@@ -238,8 +238,13 @@ section .title::after{
 }
 
 /*  sessão sobre  */
-p{
-    font-size: 22px;
+
+ p{
+    font-size: 21px;
+}
+
+.about p{
+    text-align: justify;
 }
 
 .about .title::after{
@@ -287,6 +292,10 @@ p{
     border-radius: 6px;
 }
 /*  sessão serviços */
+.services .about-content{
+    text-align: justify;
+
+}
 .services, .teams{
     background: #111;
     color: #fff;
@@ -726,6 +735,9 @@ footer span a:hover{
     }
     .about .about-content .column{
         width: 50%;
+    }
+    .about p{
+        margin-top: -70px; /* Ajuste o valor conforme necessário */
     }
     .about .about-content .left{
         display: flex;
