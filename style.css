@@ -666,6 +666,30 @@ footer span a:hover{
 
 
 /*  responsivo  */
+/* Menu responsivo */
+.menu {
+    display: none;
+}
+
+.menu-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 16px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
 @media (max-width: 1300px){
     .navbar .max-width{
         margin-left: 0;
@@ -687,9 +711,16 @@ footer span a:hover{
         max-width: 800px;
         padding: 0 50px;
     }
-    .menu-btn{
+   
+    .navbar .menu {
+        display: none;
+    }
+    
+    .navbar .menu.active {
         display: block;
-        z-index: 999;
+    }
+    ul.menu {
+        display: none;
     }
     .navbar .menu{
         position: fixed;

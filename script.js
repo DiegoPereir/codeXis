@@ -11,6 +11,7 @@ $(document).ready(function(){
             $('.scroll-up-btn').removeClass("show");
         }
     });
+ 
      $('.scroll-up-btn').click(function(){
          $('html').animate({scrollTop: 0});
      });
@@ -38,7 +39,7 @@ $(document).ready(function(){
 
 
      var typed = new Typed(".typing", {
-         strings:["INOVADORES", "EFICIENTES" ,"CONFIÀVEIS"],
+         strings:["OUSADOS", "EFICIENTES" ,"CONFIÀVEIS"],
          typeSpeed:100,
          backSpeed:60,
          loop:true
@@ -50,9 +51,8 @@ $(document).ready(function(){
         loop:true
     });
 
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+    $('.menu-btn').on('click', function() {
+        $('ul.menu').toggleClass('menu-ativo');
     });
     $('.carousel').owlCarousel({
         margin:20,
@@ -75,4 +75,14 @@ $(document).ready(function(){
         }
     });
     
+});
+   document.addEventListener('DOMContentLoaded', function() {
+    var menuBtn = document.querySelector('.menu-btn');
+    var menu = document.querySelector('.navbar .menu');
+    var menuIcon = document.querySelector('.menu-btn i');
+
+    menuBtn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+    });
 });

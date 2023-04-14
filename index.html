@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeXis | Front</title>
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/css/ionicons.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,13 +18,12 @@
     <img src="image/logo.png" alt="">
     </div>
         <div class="max-width">
-        
             <div class="logo"><a href="#">Code<span>Xis</span></a></div>
             <ul class="menu">
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Vantagens</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#skills">Especialidade</a></li>
+                <li><a href="#services">CodeXis?</a></li>
+                <li><a href="#skills">Feedbacks</a></li>
                 <li><a href="#teams">Equipe</a></li>
                 <li><a href="#contact">Contatos</a></li>
             </ul>
@@ -33,6 +33,18 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuBtn = document.querySelector('.menu-btn');
+            var menu = document.querySelector('.menu');
+
+            menuBtn.addEventListener('click', function() {
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
     <!--home inicio-->
     <section class="home" id="home">
         <div class="max-width">
@@ -331,6 +343,7 @@
     <footer>
         <span>Criado por <a href="#">CodeXis</a> | Todos os direitos reservado 2021</span>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -339,7 +352,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/css/ionicons.min.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    Copy code
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuBtn = document.querySelector('.menu-btn');
+        var menu = document.querySelector('.menu');
+
+        menuBtn.addEventListener('click', function() {
+            menu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.menu a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menu.classList.remove('active');
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
