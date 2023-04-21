@@ -75,6 +75,19 @@ $(document).ready(function(){
         }
     });
     
+    $('#enviar').on('click', function() {
+        const nome = encodeURIComponent($('#nome').val());
+        const email = encodeURIComponent($('#email').val());
+        const sobrenome = encodeURIComponent($('#sobrenome').val());
+        const mensagem = encodeURIComponent($('#mensagem').val());
+        const numeroWhatsApp = '5588993106463';
+
+        const mensagemFormatada = `Nome: ${nome}\nSobrenome: ${sobrenome}\nEmail: ${email}\nMensagem: ${mensagem}`;
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemFormatada}`;
+
+        window.open(urlWhatsApp, '_blank');
+    });
+    
 });
    document.addEventListener('DOMContentLoaded', function() {
     var menuBtn = document.querySelector('.menu-btn');

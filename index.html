@@ -182,7 +182,7 @@
     </section>
 
      <!--sessão especialidade-->
-     <section class="skills" id="skills">
+   <!--  <section class="skills" id="skills">
         <div class="max-width">
             <h2 class="title">Feedbacks de clientes</h2>
             <div class="skills-content">
@@ -230,7 +230,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
      <!--sessão equipe-->
      <section class="teams" id="teams">
@@ -316,21 +316,21 @@
                 <form action="#">
                     <div class="fields">
                         <div class="field name">
-                            <input type="text" placeholder="Nome" required>
+                            <input type="text" id="nome" placeholder="Nome" required>
                         </div>
                         <div class="field email">
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="email" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="field">
                         <div class="field">
-                            <input type="text" placeholder="Sobrenome" required>
+                            <input type="text" id="sobrenome" placeholder="Sobrenome" required>
                         </div>
                         <div class="field textarea">
-                           <textarea  cols="30" rows="10" placeholder="Escrever...." required></textarea>
+                            <textarea id="mensagem" cols="30" rows="10" placeholder="Escrever...." required></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Enviar</button>
+                            <button type="button" id="enviar">Enviar</button>
                         </div>
                     </div>
                 </form>
@@ -355,7 +355,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/css/ionicons.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    Copy code
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var menuBtn = document.querySelector('.menu-btn');
