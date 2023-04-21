@@ -74,19 +74,9 @@ $(document).ready(function(){
             }
         }
     });
+
+   
     
-    $('#enviar').on('click', function() {
-        const nome = encodeURIComponent($('#nome').val());
-        const email = encodeURIComponent($('#email').val());
-        const sobrenome = encodeURIComponent($('#sobrenome').val());
-        const mensagem = encodeURIComponent($('#mensagem').val());
-        const numeroWhatsApp = '5588993106463';
-
-        const mensagemFormatada = `Nome: ${nome}\nSobrenome: ${sobrenome}\nEmail: ${email}\nMensagem: ${mensagem}`;
-        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemFormatada}`;
-
-        window.open(urlWhatsApp, '_blank');
-    });
     
 });
    document.addEventListener('DOMContentLoaded', function() {
@@ -99,3 +89,16 @@ $(document).ready(function(){
         menuIcon.classList.toggle('active');
     });
 });
+
+function enviarMensagemWhatsApp() {
+    const nome = encodeURIComponent(document.getElementById('nome').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const sobrenome = encodeURIComponent(document.getElementById('sobrenome').value);
+    const mensagem = encodeURIComponent(document.getElementById('mensagem').value);
+    const numeroWhatsApp = '5588993106463';
+
+    const mensagemFormatada = `Nome: ${nome}%0ASobrenome: ${sobrenome}%0AEmail: ${email}%0AMensagem: ${mensagem}`;
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemFormatada}`;
+
+    window.open(urlWhatsApp, '_blank');
+}
